@@ -13,5 +13,9 @@ export class ProductComponent {
     console.log('product is shared');
   }
 
+  onNotify() {
+    console.log("father component is clicked");
+  }
+
   protected readonly products = products;
 }
