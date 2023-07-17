@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
 </head>
+
 <body>
   <div>
     <h2>Products</h2>
 
     <div *ngFor="let item of products">
       <h3>
-        <a [title]="item.name + 'details'">
+        <a [title]="item.name + 'details'" [routerLink]="['/product', item.id]">
           {{ item.name }}
         </a>
       </h3>
@@ -27,4 +29,5 @@
     </div>
   </div>
 </body>
+
 </html>

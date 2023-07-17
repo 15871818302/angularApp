@@ -5,15 +5,25 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product';
 import { RouterModule } from '@angular/router';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
-  declarations: [AppComponent, ProductComponent, ProductAlertsComponent],
+  declarations: [
+    AppComponent,
+    ProductComponent,
+    ProductAlertsComponent,
+    ProductDetailsComponent,
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {
         path: '',
         component: ProductComponent,
+      },
+      {
+        path: 'product/:productId',
+        component: ProductDetailsComponent,
       },
     ]),
   ],
