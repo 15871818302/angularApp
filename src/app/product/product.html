@@ -26,6 +26,8 @@
       </button>
 
       <app-product-alerts [product]="item" (notify)="onNotify()"></app-product-alerts>
+
+      <button type="button" [routerLink]="['/cart']">check out</button>
     </div>
   </div>
 </body>

@@ -6,6 +6,8 @@ import { ProductComponent } from './product/product';
 import { RouterModule } from '@angular/router';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartComponent } from './cart/cart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,9 +15,11 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ProductComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -24,6 +28,10 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
       {
         path: 'product/:productId',
         component: ProductDetailsComponent,
+      },
+      {
+        path: 'cart',
+        component: CartComponent,
       },
     ]),
   ],
