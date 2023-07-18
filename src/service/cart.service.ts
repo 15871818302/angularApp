@@ -23,8 +23,9 @@ export class CartService {
   }
   // 从其他文件中获取数据
   getShippingPrice() {
-    return this.http.get<{ type: string; price: number }>(
-      '/src/assets/shipping.json',
+    // 尖括号里面相当远把此种类型的数据作为返回值返回，如果不符合这个类型的数据会报错
+    return this.http.get<{ type: string; price: number }[]>(
+      '/assets/shipping.json',
     );
   }
   constructor(private http: HttpClient) {}
