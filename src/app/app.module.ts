@@ -9,6 +9,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
+// 需要导入该模块，否则无法对表单数据进行监听
+import { FormsModule, ReactiveFormsModule } from "@angular/forms"
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { ShippingComponent } from './shipping/shipping.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {
         path: '',
